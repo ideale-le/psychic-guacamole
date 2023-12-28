@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        #box {
+            /* background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F739579a7-cb51-4458-8eaf-3a0b773391d5%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1703835755&t=8d1f25f8baa7586a2e946a3555368c61'); */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            }
+
+        /* #box img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        } */
+        #con {
+            width: 300px;
+            height: 20px;
+            border: 1px solid #ccc;
+            position: relative;
+            margin: 50px auto;
+            /* background:linear-gradient(315deg,#ffbc00,#ff0058); */
+            top:300px;
+        }
+
+        #bar {
+            height: 100%;
+            width: 0;
+            /* background-color: #e4ae19; */
+            /* background:linear-gradient(315deg,#ffbc00,#ff0058); */
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            /* background:rgba(255,255,255,.1); */
+            
+        }
+        /* 自适应 */
+        @media screen and (max-width: 400px) {
+            /* 在屏幕宽度小于等于 600px 时应用的样式 */
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 1.1响应式布局特点：网页宽度自动调整、尽量少使用绝对宽度、字体的大小使用相对单位（rem、em）、布局尽量使用浮动（流式布局）。
+        1.2响应式布局核心技术：媒体查询（@media）。 -->
+    <div id="box">
+        <div id="con">
+            <div id="bar">10%</div>
+        </div>
+        <!-- <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F739579a7-cb51-4458-8eaf-3a0b773391d5%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1703835755&t=8d1f25f8baa7586a2e946a3555368c61" alt=""> -->
+        
+    </div>
+   <!-- 当进度条的动时，数字也是会随着进度条动的 绑定事件 -->
+    <script>
+        function anmia(durming){
+            const bar=document.querySelector("#bar");
+            let width=0;
+            const b = 1;
+            const interval=durming/(100/b)
+
+            function updata(){
+                if(width<100){
+                    width+=b
+                    bar.style.width=width+"%"
+                }
+                else{
+                    clearInterval(aa)
+                }
+            }
+            const aa=setInterval(updata,interval)
+        }
+        anmia(5000)
+    </script>
+</body>
+
+</html>
