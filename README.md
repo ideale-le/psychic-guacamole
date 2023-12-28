@@ -9,4 +9,7 @@ GitHubDesktop官网：https://desktop.github.com
 
 ---
 ## 版本 3.3.6
-欢迎关注微信公众号\[robotze\]
+## My Project
+
+This project is built with [Jekyll](https://jekyllrb.com/), a simple and powerful static site generator.
+
