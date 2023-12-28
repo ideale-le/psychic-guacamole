@@ -1,5 +1,7 @@
 # _config.yml
 
+source: _docs
+
 title: My Jekyll Site
 description: A simple and powerful Jekyll site
 
